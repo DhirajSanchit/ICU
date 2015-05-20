@@ -7,24 +7,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends Activity {
+public class TrafficTestActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_traffic_test);
     }
 
-    private void startCategorie(){
-
-    }
-
-
-    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_traffic_test, menu);
         return true;
     }
 
@@ -42,5 +36,4 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-    */
 }

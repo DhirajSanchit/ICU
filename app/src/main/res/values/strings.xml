@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_categories">CategoriesActivity</string>
+    <string name="title_activity_eye_test">eyeTestActivity</string>
+    <string name="title_activity_traffic_test">TrafficTestActivity</string>
+    <string name="title_activity_colorblind_test">ColorblindTestActivity</string>
 </resources>

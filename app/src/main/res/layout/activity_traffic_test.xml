@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="phonezilla.icu.TrafficTestActivity">
+
+
+    <TextView
+        android:text="Vraag  &lt;&lt;questionNumber>>  / &lt;&lt;totalQuestion>>"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionCounterTextView"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Typ het kenteken over"
+        android:id="@+id/trafficInstructionView"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/questionCounterTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tijd"
+        android:id="@+id/remainingTimeView"
+        android:layout_alignTop="@+id/trafficInstructionView"
+        android:layout_toRightOf="@+id/trafficInstructionView"
+        android:layout_toEndOf="@+id/trafficInstructionView"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="83dp"
+        android:hint="Typ hier het kenteken"/>
+
+</RelativeLayout>

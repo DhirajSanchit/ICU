@@ -16,6 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CategoriesActivity"
+            android:label="@string/title_activity_categories" >
+        </activity>
+        <activity
+            android:name=".EyeTestActivity"
+            android:label="@string/title_activity_eye_test" >
+        </activity>
+        <activity
+            android:name=".TrafficTestActivity"
+            android:label="@string/title_activity_traffic_test" >
+        </activity>
+        <activity
+            android:name=".ColorblindTestActivity"
+            android:label="@string/title_activity_colorblind_test" >
+        </activity>
     </application>
 
 </manifest>
