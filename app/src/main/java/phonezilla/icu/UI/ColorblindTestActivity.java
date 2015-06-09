@@ -1,10 +1,12 @@
-package phonezilla.icu;
+package phonezilla.icu.UI;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import phonezilla.icu.R;
 
 
 public class ColorblindTestActivity extends Activity {

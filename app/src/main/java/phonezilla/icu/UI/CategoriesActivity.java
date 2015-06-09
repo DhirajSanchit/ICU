@@ -1,10 +1,12 @@
-package phonezilla.icu;
+package phonezilla.icu.UI;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import phonezilla.icu.R;
 
 
 public class CategoriesActivity extends Activity implements View.OnClickListener{

@@ -1,25 +1,31 @@
-package phonezilla.icu;
+package phonezilla.icu.UI;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import phonezilla.icu.R;
 
-public class TrafficTestActivity extends Activity {
-    Intent mIntent = getIntent();
+
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_traffic_test);
+        setContentView(R.layout.activity_main);
     }
 
+    private void startCategorie(){
+
+    }
+
+
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_traffic_test, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -37,4 +43,5 @@ public class TrafficTestActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 }

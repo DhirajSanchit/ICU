@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,19 +17,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CategoriesActivity"
+            android:name=".UI.CategoriesActivity"
             android:label="@string/title_activity_categories" >
         </activity>
         <activity
-            android:name=".EyeTestActivity"
+            android:name=".UI.EyeTestActivity"
             android:label="@string/title_activity_eye_test" >
         </activity>
         <activity
-            android:name=".TrafficTestActivity"
+            android:name=".UI.TrafficTestActivity"
             android:label="@string/title_activity_traffic_test" >
         </activity>
         <activity
-            android:name=".ColorblindTestActivity"
+            android:name=".UI.ColorblindTestActivity"
             android:label="@string/title_activity_colorblind_test" >
         </activity>
     </application>
