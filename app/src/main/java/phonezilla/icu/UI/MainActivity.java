@@ -1,6 +1,7 @@
 package phonezilla.icu.UI;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,9 +15,20 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*
+        //Shows the App logo for a brief time and continues with the app
+        startIntro();
+         */
+        //Starts the app and brings the user to the categories screen to do a test
+        startQuiz();
     }
 
-    private void startCategorie(){
+    public void startQuiz(){
+        Intent startQuizIntent = new Intent(this, CategoriesActivity.class);
+        startActivity(startQuizIntent);
+    }
+
+    private void startIntro(){
 
     }
 

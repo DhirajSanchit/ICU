@@ -9,13 +9,15 @@ import android.widget.Button;
 import phonezilla.icu.R;
 
 
-public class CategoriesActivity extends Activity implements View.OnClickListener{
+public class CategoriesActivity extends Activity {
 
+    //implements View.OnClickListener is needed for the SWITCH thread, when bug is fixed,
+    // it will be implemented
 
     //Initializing private variables for a future onClick method.
-   protected Button mEyeTestButton;
-   protected Button mTrafficButton;
-   protected Button mColorTestButton;
+    private Button mEyeTestButton;
+    private Button mTrafficButton;
+    private Button mColorTestButton;
 
 
 
@@ -24,6 +26,11 @@ public class CategoriesActivity extends Activity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
+
+        //Intent from the mainactivity that brought us here
+        Intent intent = getIntent();
+
+
 
         //Assigning the variables to the Views that that exist in the activity_categories.xml
         mEyeTestButton = (Button) findViewById(R.id.eyeTestButton) ;
@@ -36,13 +43,14 @@ public class CategoriesActivity extends Activity implements View.OnClickListener
         mEyeTestButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-
+                startEyeTest();
             }
         });
 
         mTrafficButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startTrafficTest();
 
             }
         });
@@ -50,10 +58,27 @@ public class CategoriesActivity extends Activity implements View.OnClickListener
         mColorTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startColorTest();
             }
         });
 
+    }
+
+
+    //Start methods for the other tests;
+    private void startEyeTest() {
+        Intent eyeTestIntent = new Intent(this, EyeTestActivity.class);
+        startActivity(eyeTestIntent);
+    }
+
+    private void startTrafficTest() {
+        Intent trafficTestIntent = new Intent(this, TrafficTestActivity.class);
+        startActivity(trafficTestIntent);
+    }
+
+    private void startColorTest() {
+        Intent colorTestIntent = new Intent(this, ColorblindTestActivity.class);
+        startActivity(colorTestIntent);
     }
 
 
@@ -72,6 +97,12 @@ public class CategoriesActivity extends Activity implements View.OnClickListener
 
     */
 
+    /*
+
+    //Switch case to avoid code redundancy, trying to fix this bug later
+    //For interested, the bug is that the overriding, reading from id wont work,
+    // so that the intents activate on the onClicks
+
     @Override
     public void onClick(View v){
 
@@ -79,22 +110,22 @@ public class CategoriesActivity extends Activity implements View.OnClickListener
         switch (id) {
             case R.id.eyeTestButton:
                 Intent eyeTestIntent = new Intent(this, EyeTestActivity.class);
-                this.startActivity(eyeTestIntent);
+                startActivity(eyeTestIntent);
             break;
 
             case R.id.trafficButton:
                 Intent trafficTestIntent = new Intent(this, TrafficTestActivity.class);
-                this.startActivity(trafficTestIntent);
+                startActivity(trafficTestIntent);
             break;
 
             case R.id.colorblindButton:
                 Intent colorTestIntent = new Intent(this, ColorblindTestActivity.class);
-                this.startActivity(colorTestIntent);
+                startActivity(colorTestIntent);
             break;
 
          }
     }
-
+    */
 
     /*
 
